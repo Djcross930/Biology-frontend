@@ -13,8 +13,10 @@ export default {
   },
   methods: {
     searchGene: function () {
-      axios.post("/genes", { common_name: this.gene }).then(response => {
+      axios.post("/genes.json", { common_name: this.gene }).then(response => {
         console.log(response.data)
+        // console.log(response.data["cds_sequence"])
+        // this.sequence = response.data["cds_sequence"]
       })
     }
   }
