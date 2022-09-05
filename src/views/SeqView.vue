@@ -4,8 +4,7 @@ export default {
   data: function () {
     return {
       gene: "",
-      geneId: "",
-      sequence: {}
+      geneInfo: {}
     };
   },
   created: function () {
@@ -15,8 +14,6 @@ export default {
     searchGene: function () {
       axios.post("/genes.json", { common_name: this.gene }).then(response => {
         console.log(response.data)
-        // console.log(response.data["cds_sequence"])
-        // this.sequence = response.data["cds_sequence"]
       })
     }
   }
@@ -27,7 +24,8 @@ export default {
   <h1> YO </h1>
   <p>{{ gene }}</p>
   <input type="text" v-model="this.gene"> <button v-on:click="searchGene()">Search</button>
-  <div>
-    <p> Temporary </p>
-  </div>
+  <!-- <div>
+    <p> {{ this.geneInfo.sequence }} </p>
+    <p> {{ this.geneInfo.amino_acid_sequence }} </p>
+  </div> -->
 </template>
