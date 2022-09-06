@@ -14,6 +14,13 @@ export default {
     searchGene: function () {
       axios.post("/genes.json", { common_name: this.gene }).then(response => {
         console.log(response.data)
+        this.geneInfo = response.data;
+        var x = document.getElementById("myDIV");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
       })
     }
   }
@@ -21,11 +28,12 @@ export default {
 </script>
   
 <template>
-  <h1> YO </h1>
+  <h1> Gene Explorer </h1>
+  <p>Search a gene using it's common name.</p>
   <p>{{ gene }}</p>
   <input type="text" v-model="this.gene"> <button v-on:click="searchGene()">Search</button>
-  <!-- <div>
-    <p> {{ this.geneInfo.sequence }} </p>
-    <p> {{ this.geneInfo.amino_acid_sequence }} </p>
-  </div> -->
+  <div id="myDIV" style="display:none">
+    <p>check it</p>
+    <p> {{ this.geneInfo.id }} </p>
+  </div>
 </template>
