@@ -33,7 +33,11 @@ export default {
   <p>{{ gene }}</p>
   <input type="text" v-model="this.gene"> <button v-on:click="searchGene()">Search</button>
   <div id="myDIV" style="display:none">
-    <p>check it</p>
-    <p> {{ this.geneInfo.id }} </p>
+    <h1>Amino Acid Sequence</h1>
+    <p> <b>5'→3' Direction</b></p>
+    <p> {{ this.geneInfo.amino_acid_sequence }} </p>
+    <p> <b>Original Coding Sequence</b></p>
+    <p> {{ this.geneInfo.cds_sequence }} </p>
+    <a v-bind:href="`/genes/${geneInfo.id}`"> See More </a>
   </div>
 </template>
