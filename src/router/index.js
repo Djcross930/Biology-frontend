@@ -4,6 +4,7 @@ import SeqView from '../views/SeqView.vue'
 import SignupView from "../views/SignupView.vue"
 import LoginView from "../views/LoginView.vue"
 import LogoutView from "../views/LogoutView.vue"
+import GenesShow from "../views/GenesShow.vue"
 
 const routes = [
   {
@@ -38,6 +39,11 @@ const routes = [
     path: "/logout",
     name: "logout",
     component: LogoutView
+  },
+  {
+    path: "/genes/:id",
+    name: "genesShow",
+    component: GenesShow
   }
 ]
 
