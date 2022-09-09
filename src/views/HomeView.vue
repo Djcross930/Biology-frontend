@@ -17,7 +17,7 @@ export default {
         <h3> Welcome to geneViewer</h3>
       </div>
       <p> Visit the Chromosome Explorer tab to get detailed information on every unique human chromosome!</p>
-      <p> If you find a gene you're interested in, enter it's common name into the sequence explorer to get an in depth
+      <p> If you find a gene you're interested in, enter it's common name into the Sequence Explorer to get an in depth
         look at the gene. </p>
     </div>
     <br />
