@@ -1,7 +1,7 @@
 <template>
   <nav>
     <router-link to="/">Home</router-link> |
-    <router-link to="/about">Chromosome Explorer</router-link> |
+    <router-link to="/ChromosomeView">Chromosome Explorer</router-link> |
     <router-link to="/seq">Sequence Explorer</router-link> |
     <router-link to="/signup">Signup</router-link> |
     <router-link to="/login">Login</router-link> |

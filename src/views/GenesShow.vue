@@ -73,10 +73,13 @@ export default {
 
 <template>
   <div class="genes-show">
-    <p> {{ this.gene.id }} </p>
-    <p>{{this.gene.g_c_content}}</p>
+    <h1> {{ this.gene.common_name }} </h1>
+    <p> <b>Amino Acid Sequence: 5'→3' Direction</b></p>
+    <p> {{ this.gene.amino_acid_sequence }} </p>
+    <p> <b>Original Coding Sequence</b></p>
+    <p> {{ this.gene.cds_sequence }} </p>
     <div id="container" style="width:100%; height:400px;"></div>
-    <router-link to="/seq">Back to all genes</router-link>
+    <router-link to="/seq">Back to all gene viewer</router-link>
 
   </div>
 </template>

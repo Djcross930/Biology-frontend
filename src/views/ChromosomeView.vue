@@ -2,28 +2,14 @@
 export default {
   data: function () {
     return {
-      message: "",
-      value1: true,
-      value2: false
+      message: ""
     };
   },
   created: function () {
   },
-  watch: {
-    value() {
-      console.log("yo")
-      this.showHidden()
-    }
-  },
   methods: {
-    showHidden: function () {
-      if (this.value2 === false) {
-        this.value2 = true
-      } else {
-        this.value2 = false
-      }
-    }
-  },
+
+  }
 };
 </script>
 <template>
