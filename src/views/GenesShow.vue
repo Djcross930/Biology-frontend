@@ -78,6 +78,10 @@ export default {
     <p> {{ this.gene.amino_acid_sequence }} </p>
     <p> <b>Original Coding Sequence</b></p>
     <p> {{ this.gene.cds_sequence }} </p>
+    <p> <b>Start Codon:</b></p>
+    <p> {{ this.gene.start_codon }} </p>
+    <p> <b>Stop Codon:</b></p>
+    <p> {{ this.gene.stop_codon }} </p>
     <p> <b> Mature mRNA sequence</b></p>
     <p> {{ this.gene.mrna_sequence }} </p>
     <div id="container" style="width:100%; height:400px;"></div>
