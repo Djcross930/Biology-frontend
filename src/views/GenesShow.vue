@@ -74,16 +74,18 @@ export default {
 <template>
   <div class="genes-show">
     <h1> {{ this.gene.common_name }} </h1>
-    <p> <b>Amino Acid Sequence: 5'→3' Direction</b></p>
-    <p> {{ this.gene.amino_acid_sequence }} </p>
-    <p> <b>Original Coding Sequence</b></p>
-    <p> {{ this.gene.cds_sequence }} </p>
-    <p> <b>Start Codon:</b></p>
+    <h4> <b>Amino Acid Sequence: 5'→3' Direction</b></h4>
+    <textarea name="Text1" cols="110" rows="4">{{ this.gene.amino_acid_sequence }}</textarea>
+    <!-- <p> {{ this.gene.amino_acid_sequence }} </p> -->
+    <h4> <b>Original Coding Sequence</b></h4>
+    <textarea name="Text1" cols="110" rows="9">{{ this.gene.cds_sequence }}</textarea>
+    <!-- <p> {{ this.gene.cds_sequence }} </p> -->
+    <h4> <b> Mature mRNA sequence</b></h4>
+    <textarea name="Text1" cols="110" rows="9">{{ this.gene.mrna_sequence }}</textarea>
+    <h4> <b>Start Codon:</b></h4>
     <p> {{ this.gene.start_codon }} </p>
-    <p> <b>Stop Codon:</b></p>
+    <h4> <b>Stop Codon:</b></h4>
     <p> {{ this.gene.stop_codon }} </p>
-    <p> <b> Mature mRNA sequence</b></p>
-    <p> {{ this.gene.mrna_sequence }} </p>
     <div id="container" style="width:100%; height:400px;"></div>
     <router-link to="/seq">Back to all gene viewer</router-link>
 
