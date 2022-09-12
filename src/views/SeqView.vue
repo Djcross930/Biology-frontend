@@ -5,11 +5,12 @@ export default {
     return {
       gene: "",
       geneInfo: {},
-      geneSequence: {}
+      geneSequence: {},
+      genes: []
     };
   },
   created: function () {
-
+    this.userGenes()
   },
   methods: {
     searchGene: function () {
@@ -23,6 +24,12 @@ export default {
           x.style.display = "none";
         }
       })
+    },
+    userGenes: function () {
+      axios.get("/genes.json",).then(response => {
+        this.genes = response.data
+        console.log(response.data)
+      })
     }
   }
 };
@@ -32,6 +39,15 @@ export default {
   <h1> Sequence Explorer </h1>
   <p>Search a gene using it's common name.</p>
   <input type="text" v-model="this.gene"> <button class="btn btn-primary" v-on:click="searchGene()">Search</button>
+  <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+      aria-haspopup="true" aria-expanded="false">
+      Dropdown button
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <a v-for="gen in genes" class=" dropdown-item" v-bind:href="`/genes/${gen.id}`">{{gen.common_name}}</a>
+    </div>
+  </div>
   <div id="myDIV" style="display:none">
     <h1>{{ this.geneInfo.common_name }}</h1>
     <h1> <b>Amino Acid Sequence: 5'→3' Direction</b></h1>
