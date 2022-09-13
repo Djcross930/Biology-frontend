@@ -40,13 +40,15 @@ export default {
   <p>Search a gene using it's common name.</p>
   <input type="text" v-model="this.gene"> <button class="btn btn-primary" v-on:click="searchGene()">Search</button>
   <div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-      aria-haspopup="true" aria-expanded="false">
-      Dropdown button
+    <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton"
+      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Previous Genes
     </button>
     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
       <a v-for="gen in genes" class=" dropdown-item" v-bind:href="`/genes/${gen.id}`">{{gen.common_name}}</a>
     </div>
+
+
   </div>
   <div id="myDIV" style="display:none">
     <h1>{{ this.geneInfo.common_name }}</h1>
