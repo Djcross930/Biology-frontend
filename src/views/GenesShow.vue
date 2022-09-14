@@ -87,7 +87,7 @@ export default {
     <h4> <b>Stop Codon:</b></h4>
     <p> {{ this.gene.stop_codon }} </p>
     <div id="container" style="width:100%; height:400px;"></div>
-    <router-link to="/seq">Back to all gene viewer</router-link>
+    <router-link to="/seq">Back to Sequence Explorer</router-link>
 
   </div>
 </template>

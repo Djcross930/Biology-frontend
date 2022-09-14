@@ -18,7 +18,7 @@ export default {
     <p> Humans have 22 chromosome pairs, but if you count the two individual sex chromosomes as unique, it comes out to
       24 total. </p>
     <p> Select a chromosome from the list below to get a closer look at what makes you, <b>you.</b></p>
-    <p> First time using the Sviewer? <a href="https://www.ncbi.nlm.nih.gov/tools/sviewer/embedding-api/#bookmark1">
+    <p> First time using the Sviewer? <a href="https://www.ncbi.nlm.nih.gov/tools/sviewer/">
         NCBI </a> provides excellent documentation on how to us it.</p>
     <p><b>Select a chromosome from the list:</b></p>
     <br />
