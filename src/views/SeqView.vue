@@ -37,7 +37,7 @@ export default {
   
 <template>
   <h1> Sequence Explorer </h1>
-  <p>Search a gene using it's common name.</p>
+  <h5>Search a gene using it's common name.</h5>
   <input type="text" v-model="this.gene"> <button class="btn btn-primary" v-on:click="searchGene()">Search</button>
   <div class="dropdown">
     <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton"
@@ -63,6 +63,7 @@ export default {
   </div>
 
   <div>
+    <br />
     <br />
     <br />
     <br />
