@@ -52,34 +52,36 @@ export default {
   <!-- </div> -->
   <form>
     <br />
-    <div class="card">
-      <div class="card-header">
-        <h1>Sign-Up</h1>
+    <div class="mx-auto" style="width: 1250px;">
+      <div class="card">
+        <div class="card-header">
+          <h1>Sign-Up</h1>
+        </div>
+        <ul>
+          <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
+        </ul>
+        <div class="form-group">
+          <label for="formGroupExampleInput"><b>Name:</b></label>
+          <input type="text" class="col-xs-3" id="formGroupExampleInput" v-model="newUserParams.name">
+        </div>
+        <br />
+        <div class="form-group">
+          <label for="formGroupExampleInput2"><b>Email:</b></label>
+          <input type="text" class="col-xs-3" id="formGroupExampleInput2" v-model="newUserParams.email">
+        </div>
+        <br />
+        <div class="form-group">
+          <label for="formGroupExampleInput3"><b>Password:</b></label>
+          <input type="password" class="col-xs-3" id="formGroupExampleInput3" v-model="newUserParams.password">
+        </div>
+        <br />
+        <div class="form-group">
+          <label for="formGroupExampleInput4"><b>Confirm Password:</b></label>
+          <input type="password" class="col-xs-3" id="formGroupExampleInput4"
+            v-model="newUserParams.password_confirmation">
+        </div>
+        <br />
       </div>
-      <ul>
-        <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
-      </ul>
-      <div class="form-group">
-        <label for="formGroupExampleInput"><b>Name:</b></label>
-        <input type="text" class="col-xs-3" id="formGroupExampleInput" v-model="newUserParams.name">
-      </div>
-      <br />
-      <div class="form-group">
-        <label for="formGroupExampleInput2"><b>Email:</b></label>
-        <input type="text" class="col-xs-3" id="formGroupExampleInput2" v-model="newUserParams.email">
-      </div>
-      <br />
-      <div class="form-group">
-        <label for="formGroupExampleInput3"><b>Password:</b></label>
-        <input type="password" class="col-xs-3" id="formGroupExampleInput3" v-model="newUserParams.password">
-      </div>
-      <br />
-      <div class="form-group">
-        <label for="formGroupExampleInput4"><b>Confirm Password:</b></label>
-        <input type="password" class="col-xs-3" id="formGroupExampleInput4"
-          v-model="newUserParams.password_confirmation">
-      </div>
-      <br />
     </div>
   </form>
   <button class="btn btn-primary" v-on:click="submit()">Create Account!</button>

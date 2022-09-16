@@ -34,25 +34,27 @@ export default {
   </div>
   <div class="login">
     <form v-on:submit.prevent="submit()">
-      <div class="card">
-        <div class="card-header">
-          <h1>Login</h1>
+      <div class="mx-auto" style="width: 1250px;">
+        <div class="card">
+          <div class="card-header">
+            <h1>Login</h1>
+          </div>
+          <ul>
+            <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
+          </ul>
+          <div>
+            <label><b>Email:</b></label>
+            <input type="email" v-model="newSessionParams.email" />
+          </div>
+          <div>
+            <label><b>Password:</b></label>
+            <input type="password" v-model="newSessionParams.password" />
+            <br />
+            <br />
+          </div>
         </div>
-        <ul>
-          <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
-        </ul>
-        <div>
-          <label><b>Email:</b></label>
-          <input type="email" v-model="newSessionParams.email" />
-        </div>
-        <div>
-          <label><b>Password:</b></label>
-          <input type="password" v-model="newSessionParams.password" />
-          <br />
-          <br />
-        </div>
+        <input class="btn btn-primary" type="submit" value="Submit" />
       </div>
-      <input class="btn btn-primary" type="submit" value="Submit" />
     </form>
   </div>
   <div>
