@@ -16,15 +16,16 @@ export default {
   <div class="about">
     <div class="card">
       <div class="card-header">
-        <h1>The NCBI database has information on every single gene in our bodies, down to the base pair level.</h1>
+        <h1>Chromosome Explorer</h1>
       </div>
-      <p> Humans have 22 chromosome pairs, but if you count the two individual sex chromosomes as unique, it comes out
-        to
-        24 total. </p>
-      <p> Select a chromosome from the list below to get a closer look at what makes you, <b>you.</b></p>
-      <p> First time using the Sviewer? <a href="https://www.ncbi.nlm.nih.gov/tools/sviewer/">
-          NCBI </a> provides excellent documentation on how to us it.</p>
-      <p><b>Select a chromosome from the list:</b></p>
+      <h2>The NCBI database has information on every single human gene, down to the base pair level.</h2>
+      <h6> Humans normally have a total of 23 chromosome pairs. The sex chromosomes(X and Y) are both unique, so the
+        total comes
+        out to 24. </h6>
+      <h6> Select a chromosome from the list below to get a closer look at what makes you, <b>you.</b></h6>
+      <h6> First time using the Sviewer? <a href="https://www.ncbi.nlm.nih.gov/tools/sviewer/">
+          NCBI </a> provides excellent documentation on how to us it.</h6>
+      <h6><b>Select a chromosome from the list:</b></h6>
       <br />
     </div>
 
@@ -75,7 +76,8 @@ export default {
       <br />
       <br />
       <br />
-
+      <br />
+      <br />
     </div>
   </div>
 </template>
