@@ -12,6 +12,9 @@
 
 <style>
 #app {
+  background: url(https://img.freepik.com/premium-vector/dna-double-helix-model-light-blue-background_158582-1557.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  background-size: cover;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

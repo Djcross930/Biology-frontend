@@ -59,6 +59,29 @@ export default {
     <h1> <b>Original Coding Sequence</b></h1>
     <textarea name="Text1" cols="110" rows="9">{{ this.geneInfo.cds_sequence }}</textarea>
     <br />
-    <a v-bind:href="`/genes/${geneInfo.id}`"> See More </a>
+    <a class="btn btn-primary" v-bind:href="`/genes/${geneInfo.id}`"> See More </a>
+  </div>
+
+  <div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
   </div>
 </template>

@@ -14,14 +14,19 @@ export default {
 </script>
 <template>
   <div class="about">
-    <h1>The NCBI database has information on every single gene in our bodies, down to the base pair level.</h1>
-    <p> Humans have 22 chromosome pairs, but if you count the two individual sex chromosomes as unique, it comes out to
-      24 total. </p>
-    <p> Select a chromosome from the list below to get a closer look at what makes you, <b>you.</b></p>
-    <p> First time using the Sviewer? <a href="https://www.ncbi.nlm.nih.gov/tools/sviewer/">
-        NCBI </a> provides excellent documentation on how to us it.</p>
-    <p><b>Select a chromosome from the list:</b></p>
-    <br />
+    <div class="card">
+      <div class="card-header">
+        <h1>The NCBI database has information on every single gene in our bodies, down to the base pair level.</h1>
+      </div>
+      <p> Humans have 22 chromosome pairs, but if you count the two individual sex chromosomes as unique, it comes out
+        to
+        24 total. </p>
+      <p> Select a chromosome from the list below to get a closer look at what makes you, <b>you.</b></p>
+      <p> First time using the Sviewer? <a href="https://www.ncbi.nlm.nih.gov/tools/sviewer/">
+          NCBI </a> provides excellent documentation on how to us it.</p>
+      <p><b>Select a chromosome from the list:</b></p>
+      <br />
+    </div>
 
     <select onchange="loadSV(event.target.value)">
       <option value="">-</option>
@@ -54,6 +59,23 @@ export default {
     <br />
 
     <div id="mySeqViewer1">
+    </div>
+    <div>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+
     </div>
   </div>
 </template>
