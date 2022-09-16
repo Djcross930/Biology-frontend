@@ -64,4 +64,10 @@ nav a {
 nav a.router-link-exact-active {
   color: #42b983;
 }
+
+label {
+  display: inline-block;
+  width: 150px;
+  text-align: right;
+}
 </style>

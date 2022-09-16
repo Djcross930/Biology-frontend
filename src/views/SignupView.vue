@@ -25,8 +25,8 @@ export default {
 </script>
 
 <template>
-  <div class="signup">
-    <form v-on:submit.prevent="submit()">
+  <!-- <div class="signup"> -->
+  <!-- <form v-on:submit.prevent="submit()">
       <h1>Signup</h1>
       <ul>
         <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
@@ -48,6 +48,52 @@ export default {
         <input type="password" v-model="newUserParams.password_confirmation" />
       </div>
       <input type="submit" value="Submit" />
-    </form>
+    </form> -->
+  <!-- </div> -->
+  <form>
+    <br />
+    <h1>Sign-Up</h1>
+    <ul>
+      <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
+    </ul>
+    <div class="form-group">
+      <label for="formGroupExampleInput"><b>Name:</b></label>
+      <input type="text" class="col-xs-3" id="formGroupExampleInput" v-model="newUserParams.name">
+    </div>
+    <br />
+    <div class="form-group">
+      <label for="formGroupExampleInput2"><b>Email:</b></label>
+      <input type="text" class="col-xs-3" id="formGroupExampleInput2" v-model="newUserParams.email">
+    </div>
+    <br />
+    <div class="form-group">
+      <label for="formGroupExampleInput3"><b>Password:</b></label>
+      <input type="password" class="col-xs-3" id="formGroupExampleInput3" v-model="newUserParams.password">
+    </div>
+    <br />
+    <div class="form-group">
+      <label for="formGroupExampleInput4"><b>Confirm Password:</b></label>
+      <input type="password" class="col-xs-3" id="formGroupExampleInput4" v-model="newUserParams.password_confirmation">
+    </div>
+    <br />
+  </form>
+  <button class="btn btn-primary" v-on:click="submit()">Create Account!</button>
+  <div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
   </div>
+
+
 </template>
