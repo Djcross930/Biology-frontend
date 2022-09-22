@@ -85,22 +85,6 @@ export default {
     </div>
   </form>
   <button class="btn btn-primary" v-on:click="submit()">Create Account!</button>
-  <div>
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-  </div>
 
 
 </template>

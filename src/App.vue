@@ -56,7 +56,7 @@ export default {
 </script>
 
 <style>
-#app {
+body {
   background: url(https://img.freepik.com/premium-vector/dna-double-helix-model-light-blue-background_158582-1557.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   background-size: cover;

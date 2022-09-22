@@ -62,23 +62,5 @@ export default {
 
     <div id="mySeqViewer1">
     </div>
-    <div>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-    </div>
   </div>
 </template>
