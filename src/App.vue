@@ -28,17 +28,32 @@
             <b>Authentication</b>
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/signup">SignUp</a>
-            <a class="dropdown-item" href="/login">Login</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="/logout">Logout</a>
-          </div>
-        </li>
-      </ul>
+        <li v-if="!isLoggedIn"><a class="dropdown-item" href="/signup">Signup</a></li>
+        <li v-if="!isLoggedIn"><a class="dropdown-item" href="/login">Login</a></li>
+        <div class="dropdown-divider"></div>
+        <li v-if="isLoggedIn"><a class="dropdown-item" href="/logout">Logout</a></li>
+    </div>
+    </li>
+    </ul>
     </div>
   </nav>
   <router-view />
 </template>
+
+<script>
+export default {
+  data: function () {
+    return {
+      isLoggedIn: !!localStorage.jwt
+    }
+  },
+  watch: {
+    $route: function () {
+      this.isLoggedIn = !!localStorage.jwt
+    }
+  }
+}
+</script>
 
 <style>
 #app {
