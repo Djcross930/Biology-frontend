@@ -6,8 +6,14 @@ export default {
       gene: "",
       geneInfo: {},
       geneSequence: {},
-      genes: []
+      genes: [],
+      isLoggedIn: !!localStorage.jwt
     };
+  },
+  watch: {
+    $route: function () {
+      this.isLoggedIn = !!localStorage.jwt
+    }
   },
   created: function () {
     this.userGenes()
@@ -39,15 +45,16 @@ export default {
   <h1> Sequence Explorer </h1>
   <h5>Search a gene using it's common name.</h5>
   <input type="text" v-model="this.gene"> <button class="btn btn-primary" v-on:click="searchGene()">Search</button>
-  <div class="dropdown">
-    <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton"
-      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Previous Genes
-    </button>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-      <a v-for="gen in genes" class=" dropdown-item" v-bind:href="`/genes/${gen.id}`">{{gen.common_name}}</a>
+  <div class="container" v-if="isLoggedIn">
+    <div class="dropdown">
+      <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton"
+        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Previous Genes
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a v-for="gen in genes" class=" dropdown-item" v-bind:href="`/genes/${gen.id}`">{{gen.common_name}}</a>
+      </div>
     </div>
-
 
   </div>
   <div id="myDIV" style="display:none">
@@ -59,10 +66,14 @@ export default {
     <h1> <b>Original Coding Sequence</b></h1>
     <textarea name="Text1" cols="110" rows="9">{{ this.geneInfo.cds_sequence }}</textarea>
     <br />
-    <a class="btn btn-primary" v-bind:href="`/genes/${geneInfo.id}`"> See More </a>
+    <div class="container" v-if="isLoggedIn">
+      <a class="btn btn-primary" v-bind:href="`/genes/${geneInfo.id}`"> See More </a>
+    </div>
   </div>
 
   <div>
+    <br />
+    <br />
     <br />
     <br />
     <br />
